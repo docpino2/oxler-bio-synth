@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
@@ -24,12 +25,27 @@ const ContactSection = () => {
   return (
     <section id="contacto" className="section-padding border-t border-border">
       <div className="max-w-3xl mx-auto">
-        <p className="text-sm uppercase tracking-[0.3em] text-secondary font-mono mb-4">
-          Conecta
-        </p>
-        <h2 className="text-3xl md:text-5xl font-bold mb-12 text-foreground">Contacto</h2>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+        >
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-px bg-secondary" />
+            <p className="text-xs uppercase tracking-[0.4em] text-secondary font-mono">Conecta</p>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold mb-12 text-foreground">Contacto</h2>
+        </motion.div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <motion.form
+          onSubmit={handleSubmit}
+          className="space-y-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <div className="grid md:grid-cols-2 gap-4">
             <input
               type="text"
@@ -37,7 +53,7 @@ const ContactSection = () => {
               required
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
-              className="w-full px-4 py-3 bg-card border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors"
+              className="w-full px-4 py-3 bg-card border border-border rounded-none text-foreground text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors font-mono"
             />
             <input
               type="email"
@@ -45,7 +61,7 @@ const ContactSection = () => {
               required
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
-              className="w-full px-4 py-3 bg-card border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors"
+              className="w-full px-4 py-3 bg-card border border-border rounded-none text-foreground text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors font-mono"
             />
           </div>
           <textarea
@@ -54,17 +70,19 @@ const ContactSection = () => {
             rows={5}
             value={form.message}
             onChange={(e) => setForm({ ...form, message: e.target.value })}
-            className="w-full px-4 py-3 bg-card border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors resize-none"
+            className="w-full px-4 py-3 bg-card border border-border rounded-none text-foreground text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors resize-none font-mono"
           />
-          <button
+          <motion.button
             type="submit"
             disabled={loading}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
+            whileHover={{ scale: 1.01 }}
+            whileTap={{ scale: 0.99 }}
+            className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-mono text-xs uppercase tracking-wider rounded-none hover:shadow-[0_0_30px_hsl(185_80%_55%/0.3)] transition-shadow disabled:opacity-50"
           >
-            <Send size={16} />
+            <Send size={14} />
             {loading ? "Enviando..." : "Enviar mensaje"}
-          </button>
-        </form>
+          </motion.button>
+        </motion.form>
       </div>
     </section>
   );
