@@ -26,6 +26,7 @@ const agents = [
       },
     ],
     status: "OPERATIVO",
+    demoUrl: "https://youtu.be/A8SiGn--lsA",
   },
   {
     icon: TrendingUp,
@@ -49,6 +50,7 @@ const agents = [
       },
     ],
     status: "OPERATIVO",
+    demoUrl: "https://youtu.be/2xFvBjOZF_4",
   },
 ];
 
@@ -125,9 +127,14 @@ const AgentsSection = () => {
               </div>
 
               <div className="mt-8 pt-6 border-t border-border">
-                <button className="font-mono text-xs uppercase tracking-widest text-primary hover:text-neon-cyan transition-colors">
+                <a
+                  href={agent.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-xs uppercase tracking-widest text-primary hover:text-neon-cyan transition-colors"
+                >
                   Ver Demo →
-                </button>
+                </a>
               </div>
             </motion.div>
           ))}
