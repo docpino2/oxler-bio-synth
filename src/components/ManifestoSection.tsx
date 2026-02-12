@@ -145,13 +145,10 @@ const ManifestoSection = () => {
             <p className="text-muted-foreground text-lg leading-relaxed">
               Creemos en nuestro{" "}
               <span className="text-foreground font-semibold">
-                ecosistema agéntico
+              ecosistema agéntico
               </span>
               : donde la IA asume la carga cognitiva administrativa para
-              devolverle al médico su activo más preciado:{" "}
-              <span className="text-neon-cyan font-semibold">
-                el tiempo para pensar más rápido y mejor.
-              </span>
+              crear eficiencias reales, desde la medicina profunda.
             </p>
           </div>
 
@@ -165,7 +162,7 @@ const ManifestoSection = () => {
           >
             <p className="text-xl md:text-2xl font-bold text-foreground italic leading-snug">
               "No automatizamos procesos para ahorrar dinero; orquestamos
-              sistemas para salvar el criterio médico y ser eficientes."
+              sistemas de decisión."
             </p>
           </motion.blockquote>
         </motion.div>
