@@ -4,6 +4,7 @@ import fotoAndreaFranco from "@/assets/foto-andrea-franco.jpg";
 import fotoLilianaClavijo from "@/assets/foto-liliana-clavijo.jpg";
 import fotoGerardoOspina from "@/assets/foto-gerardo-ospina.png";
 import fotoJulianMartinez from "@/assets/foto-julian-martinez.jpg";
+import fotoTatianaSierra from "@/assets/foto-tatiana-sierra.jpg";
 
 const teamMembers = [
   {
@@ -46,6 +47,7 @@ const teamMembers = [
     role: "Consultora",
     description: "Enfermera Oncóloga\nMSc en Gerencia de Salud",
     initials: "TS",
+    photo: fotoTatianaSierra,
   },
 ];
 
@@ -103,7 +105,7 @@ const TeamSection = () => {
               {/* Avatar */}
               <div className="relative mx-auto mb-6 w-28 h-28 rounded-full border-2 border-border group-hover:border-neon-cyan/50 transition-colors duration-500 flex items-center justify-center bg-muted/30 overflow-hidden">
                 {member.photo ? (
-                  <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
+                  <img src={member.photo} alt={member.name} className="w-full h-full object-cover object-top" />
                 ) : (
                   <span className="text-2xl font-bold text-neon-cyan/70 group-hover:text-neon-cyan transition-colors duration-500 font-mono">
                     {member.initials}
