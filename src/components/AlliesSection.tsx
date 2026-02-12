@@ -11,6 +11,8 @@ import logoHomil from "@/assets/logo-homil.jpg";
 import logoCtic from "@/assets/logo-ctic.png";
 import logoKaizen from "@/assets/logo-kaizen.png";
 import logoUso from "@/assets/logo-uso.png";
+import logoRimac from "@/assets/logo-rimac.png";
+import logoSegurosBolivar from "@/assets/logo-seguros-bolivar.png";
 import logoUniandes from "@/assets/logo-uniandes.png";
 import logoAipocrates from "@/assets/logo-aipocrates.png";
 import logoMitCriticalData from "@/assets/logo-mit-critical-data.png";
@@ -32,6 +34,8 @@ const stakeholderLogos = [
   { name: "CTIC", logo: logoCtic },
   { name: "Kaizen", logo: logoKaizen },
   { name: "Unidad Oncológica Surcolombiana", logo: logoUso },
+  { name: "RIMAC Seguros", logo: logoRimac },
+  { name: "Seguros Bolívar", logo: logoSegurosBolivar },
 ];
 
 const academicLogos = [
