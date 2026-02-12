@@ -3,6 +3,7 @@ import fotoLuisPino from "@/assets/foto-luis-pino.png";
 import fotoAndreaFranco from "@/assets/foto-andrea-franco.jpg";
 import fotoLilianaClavijo from "@/assets/foto-liliana-clavijo.jpg";
 import fotoGerardoOspina from "@/assets/foto-gerardo-ospina.png";
+import fotoJulianMartinez from "@/assets/foto-julian-martinez.jpg";
 
 const teamMembers = [
   {
@@ -38,6 +39,7 @@ const teamMembers = [
     role: "Desarrollador",
     description: "Ingeniero Biomédico\nIngeniero Electrónico",
     initials: "JM",
+    photo: fotoJulianMartinez,
   },
   {
     name: "Tatiana Sierra",
