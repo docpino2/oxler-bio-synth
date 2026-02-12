@@ -5,6 +5,9 @@ import fotoLilianaClavijo from "@/assets/foto-liliana-clavijo.jpg";
 import fotoGerardoOspina from "@/assets/foto-gerardo-ospina.png";
 import fotoJulianMartinez from "@/assets/foto-julian-martinez.jpg";
 import fotoTatianaSierra from "@/assets/foto-tatiana-sierra.jpg";
+import fotoManuelGomez from "@/assets/foto-manuel-gomez.png";
+import fotoAlejandroGonzalez from "@/assets/foto-alejandro-gonzalez.png";
+import fotoJuanPabloPino from "@/assets/foto-juan-pablo-pino.png";
 
 const teamMembers = [
   {
@@ -48,6 +51,27 @@ const teamMembers = [
     description: "Enfermera Oncóloga\nMSc en Gerencia de Salud",
     initials: "TS",
     photo: fotoTatianaSierra,
+  },
+  {
+    name: "Manuel Gómez Chávez",
+    role: "Director Financiero y Contable",
+    description: "",
+    initials: "MG",
+    photo: fotoManuelGomez,
+  },
+  {
+    name: "Alejandro González",
+    role: "Líder de Calidad y Métricas",
+    description: "",
+    initials: "AG",
+    photo: fotoAlejandroGonzalez,
+  },
+  {
+    name: "Juan Pablo Pino Franco",
+    role: "Community Manager",
+    description: "",
+    initials: "JP",
+    photo: fotoJuanPabloPino,
   },
 ];
 
