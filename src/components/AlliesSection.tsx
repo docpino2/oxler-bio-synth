@@ -81,7 +81,7 @@ const AlliesSection = () => {
                     <img
                       src={ally.logo}
                       alt={ally.name}
-                      className="max-h-14 max-w-full object-contain brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity duration-500"
+                      className="max-h-14 max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-500"
                     />
                   </motion.div>
                 ))}
