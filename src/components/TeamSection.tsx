@@ -13,14 +13,14 @@ import fotoIvanTriana from "@/assets/foto-ivan-triana.jpeg";
 const teamMembers = [
   {
     name: "Luis Eduardo Pino V.",
-    role: "CEO",
+    role: "Socio Fundador y CEO",
     description: "Médico Hematólogo y Oncólogo\nEspecialista en IA/ML",
     initials: "LP",
     photo: fotoLuisPino,
   },
   {
     name: "Andrea Franco Corredor",
-    role: "Gerente General",
+    role: "Socio Fundador y Gerente General",
     description: "Médica Oftalmóloga",
     initials: "AF",
     photo: fotoAndreaFranco,
