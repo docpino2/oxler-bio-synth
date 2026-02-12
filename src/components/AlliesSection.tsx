@@ -72,7 +72,7 @@ const AlliesSection = () => {
           <div className="glow-line max-w-xs mb-6" />
           <p className="text-muted-foreground text-lg max-w-3xl leading-relaxed">
             Colaboramos con líderes de la industria farmacéutica, stakeholders clave del sector salud
-            y centros académicos de excelencia para transformar la atención clínica.
+            y centros académicos de excelencia para crear medicina exponencial.
           </p>
         </motion.div>
 
