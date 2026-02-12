@@ -2,7 +2,15 @@ import { motion } from "framer-motion";
 import oxlerLogo from "@/assets/oxler-logo.png";
 
 const Navbar = () => {
-  const navItems = ["Ecosistema", "Agentes IA", "Servicios", "Contacto"];
+  const navItems = [
+    { label: "Manifiesto", href: "#manifiesto" },
+    { label: "Ciclo OxLER", href: "#ciclo" },
+    { label: "Ecosistema", href: "#ecosistema" },
+    { label: "Agentes IA", href: "#agentes-ia" },
+    { label: "OxLearning", href: "#oxlearning" },
+    { label: "Equipo", href: "#equipo" },
+    { label: "Contacto", href: "#contacto" },
+  ];
 
   return (
     <motion.nav
@@ -19,18 +27,14 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase().replace(" ", "-")}`}
+              key={item.label}
+              href={item.href}
               className="text-sm font-mono uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors"
             >
-              {item}
+              {item.label}
             </a>
           ))}
         </div>
-
-        <button className="brutalist-border-accent px-4 py-2 text-xs font-mono uppercase tracking-widest text-primary hover:bg-primary hover:text-primary-foreground transition-all">
-          Acceso
-        </button>
       </div>
     </motion.nav>
   );
