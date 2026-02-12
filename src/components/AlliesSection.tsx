@@ -11,6 +11,10 @@ import logoHomil from "@/assets/logo-homil.jpg";
 import logoCtic from "@/assets/logo-ctic.png";
 import logoKaizen from "@/assets/logo-kaizen.png";
 import logoUso from "@/assets/logo-uso.png";
+import logoUniandes from "@/assets/logo-uniandes.png";
+import logoAipocrates from "@/assets/logo-aipocrates.png";
+import logoMitCriticalData from "@/assets/logo-mit-critical-data.png";
+import logoZadorex from "@/assets/logo-zadorex.png";
 
 const pharmaLogos = [
   { name: "Johnson & Johnson", logo: logoJnj },
@@ -30,7 +34,12 @@ const stakeholderLogos = [
   { name: "Unidad Oncológica Surcolombiana", logo: logoUso },
 ];
 
-const academicLogos: { name: string; logo: string }[] = [];
+const academicLogos = [
+  { name: "Universidad de los Andes", logo: logoUniandes },
+  { name: "AIpocratΣs", logo: logoAipocrates },
+  { name: "MIT Critical Data", logo: logoMitCriticalData },
+  { name: "Zadorex", logo: logoZadorex },
+];
 
 type AllyCategory = {
   title: string;
