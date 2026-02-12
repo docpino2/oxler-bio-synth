@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Layers, Cpu, Database, Workflow, Zap, Globe, Building2 } from "lucide-react";
+import { Layers, Cpu, Database, Workflow, Zap, Globe, Building2, GraduationCap } from "lucide-react";
 
 const services = [
   {
@@ -31,6 +31,11 @@ const services = [
     icon: Globe,
     title: "HEOR & Acceso a Mercado",
     description: "Evaluación de tecnologías sanitarias, modelos farmacoeconómicos y estrategias de acceso.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Educación & E-Learning",
+    description: "Diseño de eventos educativos disruptivos y plataformas de e-learning usando tecnologías/IA, metodologías activas y epistemología conductual.",
   },
   {
     icon: Building2,
