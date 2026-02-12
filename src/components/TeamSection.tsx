@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import fotoLuisPino from "@/assets/foto-luis-pino.png";
 import fotoAndreaFranco from "@/assets/foto-andrea-franco.jpg";
 import fotoLilianaClavijo from "@/assets/foto-liliana-clavijo.jpg";
+import fotoGerardoOspina from "@/assets/foto-gerardo-ospina.png";
 
 const teamMembers = [
   {
@@ -30,6 +31,7 @@ const teamMembers = [
     role: "Líder de Ingeniería",
     description: "Ingeniero de Sistemas\nMSc Educación",
     initials: "GO",
+    photo: fotoGerardoOspina,
   },
   {
     name: "Julián Martínez L.",
