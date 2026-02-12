@@ -10,6 +10,7 @@ import fotoManuelGomez from "@/assets/foto-manuel-gomez.png";
 import fotoAlejandroGonzalez from "@/assets/foto-alejandro-gonzalez.png";
 import fotoJuanPabloPino from "@/assets/foto-juan-pablo-pino.png";
 import fotoIvanTriana from "@/assets/foto-ivan-triana.jpeg";
+import fotoFelipeFigueroa from "@/assets/foto-felipe-figueroa.jpeg";
 
 const teamMembers = [
   { name: "Luis Eduardo Pino V.", role: "Socio Fundador y CEO", description: "Médico Hematólogo y Oncólogo\nEspecialista en IA/ML", initials: "LP", photo: fotoLuisPino },
@@ -17,6 +18,7 @@ const teamMembers = [
   { name: "Liliana Clavijo Alvarez", role: "Gerente de Proyectos", description: "Médica Auditora,\nEspecialista en Derecho Médico", initials: "LC", photo: fotoLilianaClavijo },
   { name: "Gerardo Ospina H.", role: "Líder de Ingeniería", description: "Ingeniero de Sistemas\nMSc Educación", initials: "GO", photo: fotoGerardoOspina },
   { name: "Julián Martínez L.", role: "Desarrollador", description: "Ingeniero Biomédico\nIngeniero Electrónico", initials: "JM", photo: fotoJulianMartinez },
+  { name: "Felipe Figueroa", role: "Asesor en Derecho de IA y Propiedad Intelectual", description: "Abogado\nMSc Biociencias y Derecho\nEspecialista en PI", initials: "FF", photo: fotoFelipeFigueroa },
   { name: "Iván Camilo Triana A.", role: "Líder de Investigación", description: "Médico Internista, Epidemiólogo\nFellowship Hemato-Oncología", initials: "IT", photo: fotoIvanTriana },
   { name: "Tatiana Sierra", role: "Consultora", description: "Enfermera Oncóloga\nMSc en Gerencia de Salud", initials: "TS", photo: fotoTatianaSierra },
   { name: "Manuel Gómez Chávez", role: "Director Financiero y Contable", description: "", initials: "MG", photo: fotoManuelGomez },
