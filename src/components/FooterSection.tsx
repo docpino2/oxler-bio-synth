@@ -27,18 +27,23 @@ const FooterSection = () => {
             transition={{ delay: 0.1 }}
           >
             <h4 className="font-mono text-xs uppercase tracking-widest text-muted-foreground mb-6">
-              Ecosistema
+              Navegación
             </h4>
             <ul className="space-y-3">
-              {["Ecosistema PENTA", "Agente Auditor", "PegaXus HEOR", "OxLearning", "Data & Analytics"].map(
-                (item) => (
-                  <li key={item}>
-                    <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                      {item}
-                    </a>
-                  </li>
-                )
-              )}
+              {[
+                { label: "Manifiesto", href: "#manifiesto" },
+                { label: "Ciclo OxLER", href: "#ciclo" },
+                { label: "Ecosistema PENTA", href: "#ecosistema" },
+                { label: "Agentes IA", href: "#agentes-ia" },
+                { label: "OxLearning", href: "#oxlearning" },
+                { label: "Equipo", href: "#equipo" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <a href={item.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </motion.div>
 
@@ -52,7 +57,10 @@ const FooterSection = () => {
               Contacto
             </h4>
             <div className="space-y-3 text-sm text-muted-foreground">
-              <p>info@oxler.co</p>
+              <p>NIT 901.600.934-7</p>
+              <p><a href="mailto:gerencia@oxler.me" className="hover:text-primary transition-colors">gerencia@oxler.me</a></p>
+              <p><a href="mailto:media@oxler.me" className="hover:text-primary transition-colors">media@oxler.me</a></p>
+              <p><a href="tel:+573108616076" className="hover:text-primary transition-colors">+57 310 861 6076</a></p>
               <p>Colombia</p>
             </div>
           </motion.div>
