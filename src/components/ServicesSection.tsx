@@ -30,7 +30,7 @@ const services = [
   {
     icon: Globe,
     title: "HEOR & Acceso a Mercado",
-    description: "Evaluación de tecnologías sanitarias, modelos farmacoeconómicos y estrategias de acceso.",
+    description: "Evaluación de tecnologías sanitarias, modelos farmacoeconómicos y estrategias de acceso. Aplicación de Matrices de Decisión Multicriterio (MCDA) y asesoría en modelos de negociación.",
   },
   {
     icon: GraduationCap,
@@ -65,14 +65,17 @@ const ServicesSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
-          {services.filter(s => s.title !== "Unidades de IA Clínica").map((service, index) => (
+          {services.filter(s => s.title !== "Unidades de IA Clínica").map((service, index, arr) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
-              className="group bg-background p-8 hover:bg-muted/50 transition-colors duration-300"
+              className={`group bg-background p-8 hover:bg-muted/50 transition-colors duration-300 ${
+                index === arr.length - 1 && arr.length % 3 === 1 ? 'lg:col-span-3' :
+                index >= arr.length - 2 && arr.length % 3 === 2 ? 'lg:col-span-1' : ''
+              }`}
             >
               <service.icon className="w-5 h-5 text-primary mb-6" />
               <h3 className="text-lg font-bold mb-3 text-foreground group-hover:text-gradient-bio transition-colors">
