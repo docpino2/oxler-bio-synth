@@ -86,7 +86,7 @@ const CicloOxlerSection = () => {
           transition={{ duration: 0.7 }}
           className="mb-16 relative"
         >
-          <div className="relative overflow-hidden border border-border bg-card/50 p-3 md:p-4 max-w-md mx-auto">
+          <div className="relative overflow-hidden border border-border bg-card/50 p-3 md:p-4 max-w-2xl mx-auto">
             <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-primary" />
             <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-secondary" />
             <img
