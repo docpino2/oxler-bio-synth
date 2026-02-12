@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { ShieldCheck, TrendingUp } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ShieldCheck, TrendingUp, Play, X } from "lucide-react";
+import { useState } from "react";
 import oncoagentLogo from "@/assets/oncoagent-logo.png";
 import pegaxusLogo from "@/assets/pegaxus-logo.png";
 
@@ -26,7 +27,7 @@ const agents = [
       },
     ],
     status: "OPERATIVO",
-    demoUrl: "https://youtu.be/A8SiGn--lsA",
+    demoUrl: "https://www.youtube.com/embed/A8SiGn--lsA",
   },
   {
     icon: TrendingUp,
@@ -50,11 +51,13 @@ const agents = [
       },
     ],
     status: "OPERATIVO",
-    demoUrl: "https://youtu.be/2xFvBjOZF_4",
+    demoUrl: "https://www.youtube.com/embed/2xFvBjOZF_4",
   },
 ];
 
 const AgentsSection = () => {
+  const [activeDemo, setActiveDemo] = useState<string | null>(null);
+
   return (
     <section id="agentes-ia" className="relative py-32 bg-card">
       <div className="absolute inset-0 grid-pattern opacity-5" />
@@ -126,15 +129,44 @@ const AgentsSection = () => {
                 ))}
               </div>
 
+              {/* Demo video */}
+              <AnimatePresence>
+                {activeDemo === agent.name && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="mt-6 overflow-hidden"
+                  >
+                    <div className="relative w-full aspect-video border border-border">
+                      <iframe
+                        src={agent.demoUrl}
+                        title={`Demo ${agent.name}`}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="absolute inset-0 w-full h-full"
+                      />
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
               <div className="mt-8 pt-6 border-t border-border">
-                <a
-                  href={agent.demoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-mono text-xs uppercase tracking-widest text-primary hover:text-neon-cyan transition-colors"
+                <button
+                  onClick={() => setActiveDemo(activeDemo === agent.name ? null : agent.name)}
+                  className="font-mono text-xs uppercase tracking-widest text-primary hover:text-neon-cyan transition-colors flex items-center gap-2"
                 >
-                  Ver Demo →
-                </a>
+                  {activeDemo === agent.name ? (
+                    <>
+                      <X className="w-3 h-3" /> Cerrar Demo
+                    </>
+                  ) : (
+                    <>
+                      <Play className="w-3 h-3" /> Ver Demo
+                    </>
+                  )}
+                </button>
               </div>
             </motion.div>
           ))}
