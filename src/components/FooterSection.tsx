@@ -37,6 +37,7 @@ const FooterSection = () => {
                 { label: "Agentes IA", href: "#agentes-ia" },
                 { label: "OxLearning", href: "#oxlearning" },
                 { label: "Equipo", href: "#equipo" },
+                { label: "Aliados", href: "#aliados" },
               ].map((item) => (
                 <li key={item.label}>
                   <a href={item.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -61,6 +62,7 @@ const FooterSection = () => {
               <p><a href="mailto:gerencia@oxler.me" className="hover:text-primary transition-colors">gerencia@oxler.me</a></p>
               <p><a href="mailto:media@oxler.me" className="hover:text-primary transition-colors">media@oxler.me</a></p>
               <p><a href="tel:+573108616076" className="hover:text-primary transition-colors">+57 310 861 6076</a></p>
+              <p><a href="https://oxler.ai/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">oxler.ai</a></p>
               <p>Colombia</p>
             </div>
           </motion.div>

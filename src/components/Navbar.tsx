@@ -9,6 +9,7 @@ const Navbar = () => {
     { label: "Agentes IA", href: "#agentes-ia" },
     { label: "OxLearning", href: "#oxlearning" },
     { label: "Equipo", href: "#equipo" },
+    { label: "Aliados", href: "#aliados" },
     { label: "Contacto", href: "#contacto" },
   ];
 
