@@ -7,6 +7,7 @@ import AgentsSection from "@/components/AgentsSection";
 import ServicesSection from "@/components/ServicesSection";
 import OxLearningSection from "@/components/OxLearningSection";
 import TeamSection from "@/components/TeamSection";
+import AlliesSection from "@/components/AlliesSection";
 import FooterSection from "@/components/FooterSection";
 
 const Index = () => {
@@ -21,6 +22,7 @@ const Index = () => {
       <ServicesSection />
       <OxLearningSection />
       <TeamSection />
+      <AlliesSection />
       <FooterSection />
     </div>
   );
