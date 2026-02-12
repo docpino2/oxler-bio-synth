@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import logoJnj from "@/assets/logo-jnj.png";
 import logoSanofi from "@/assets/logo-sanofi.png";
 import logoRoche from "@/assets/logo-roche.png";
@@ -45,71 +46,37 @@ const academicLogos = [
   { name: "Zadorex", logo: logoZadorex },
 ];
 
-type AllyCategory = {
-  title: string;
-  logos: { name: string; logo: string }[];
-};
-
-const categories: AllyCategory[] = [
-  { title: "Pharma", logos: pharmaLogos },
-  { title: "Stakeholders", logos: stakeholderLogos },
-  { title: "Alianzas Académicas", logos: academicLogos },
-];
-
 const AlliesSection = () => {
+  const { t } = useTranslation();
+
+  const categories = [
+    { title: t("allies.pharma"), logos: pharmaLogos },
+    { title: t("allies.stakeholders"), logos: stakeholderLogos },
+    { title: t("allies.academic"), logos: academicLogos },
+  ];
+
   return (
     <section id="aliados" className="relative py-32">
       <div className="container relative z-10 px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
-        >
-          <span className="font-mono text-xs uppercase tracking-[0.3em] text-neon-cyan block mb-4">
-            Red de confianza
-          </span>
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-16">
+          <span className="font-mono text-xs uppercase tracking-[0.3em] text-neon-cyan block mb-4">{t("allies.tag")}</span>
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Nuestros <span className="text-gradient-bio">aliados</span>
+            {t("allies.title")} <span className="text-gradient-bio">{t("allies.titleHighlight")}</span>
           </h2>
           <div className="glow-line max-w-xs mb-6" />
-          <p className="text-muted-foreground text-lg max-w-3xl leading-relaxed">
-            Colaboramos con líderes de la industria farmacéutica, stakeholders clave del sector salud
-            y centros académicos de excelencia en Colombia, Perú y Ecuador para crear medicina exponencial.
-          </p>
+          <p className="text-muted-foreground text-lg max-w-3xl leading-relaxed">{t("allies.description")}</p>
         </motion.div>
 
         {categories.map((category, catIndex) => {
           if (category.logos.length === 0) return null;
           return (
-            <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: catIndex * 0.15 }}
-              className="mb-16 last:mb-0"
-            >
-              <h3 className="font-mono text-sm uppercase tracking-widest text-neon-magenta mb-8 border-b border-border pb-3">
-                {category.title}
-              </h3>
+            <motion.div key={category.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: catIndex * 0.15 }} className="mb-16 last:mb-0">
+              <h3 className="font-mono text-sm uppercase tracking-widest text-neon-magenta mb-8 border-b border-border pb-3">{category.title}</h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
                 {category.logos.map((ally, i) => (
-                  <motion.div
-                    key={ally.name}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: i * 0.08 }}
-                    className="group relative flex items-center justify-center border border-border bg-card/30 backdrop-blur-sm p-6 h-28 hover:border-neon-cyan/40 transition-all duration-500"
-                  >
+                  <motion.div key={ally.name} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }} className="group relative flex items-center justify-center border border-border bg-card/30 backdrop-blur-sm p-6 h-28 hover:border-neon-cyan/40 transition-all duration-500">
                     <div className="absolute inset-0 bg-gradient-to-b from-neon-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                    <img
-                      src={ally.logo}
-                      alt={ally.name}
-                      className={`max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-500 ${ally.name === "La Cardio" || ally.name === "AIpocratΣs" ? "max-h-20" : "max-h-14"}`}
-                    />
+                    <img src={ally.logo} alt={ally.name} className={`max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-500 ${ally.name === "La Cardio" || ally.name === "AIpocratΣs" ? "max-h-20" : "max-h-14"}`} />
                   </motion.div>
                 ))}
               </div>
