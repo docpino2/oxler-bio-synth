@@ -1,102 +1,136 @@
 import { motion } from "framer-motion";
-import { Bot, TrendingUp, ExternalLink } from "lucide-react";
+import { ShieldCheck, TrendingUp } from "lucide-react";
+import oncoagentLogo from "@/assets/oncoagent-logo.png";
+import pegaxusLogo from "@/assets/pegaxus-logo.png";
 
 const agents = [
   {
-    icon: Bot,
+    icon: ShieldCheck,
+    image: oncoagentLogo,
     name: "OncoAgent",
-    role: "Pertinencia Clínica & Auditoría",
-    description:
-      "Agente de IA especializado en oncología que evalúa pertinencia de tratamientos, audita protocolos clínicos y genera reportes de valor bajo supervisión médica.",
-    color: "primary" as const,
+    tag: "EL GUARDIÁN DE LA PERTINENCIA CLÍNICA",
+    purpose:
+      "Disminuir la variabilidad clínica y reducir la carga administrativa del auditor humano.",
+    capabilities: [
+      {
+        title: "Auditoría Concurrente",
+        desc: "Validación inmediata de pertinencia técnica bajo estándares internacionales y nacionales (NCCN, ASCO).",
+      },
+      {
+        title: "Estructuración Biodigital",
+        desc: "Transforma historias clínicas densas en nodos de decisión accionables.",
+      },
+      {
+        title: "Reducción de Fricción",
+        desc: "Actúa como un puente técnico entre el prestador y el pagador para agilizar el acceso al tratamiento.",
+      },
+    ],
+    status: "OPERATIVO",
   },
   {
     icon: TrendingUp,
-    name: "PegaXus",
-    role: "HEOR & Economía de la Salud",
-    description:
-      "Agente enfocado en Health Economics and Outcomes Research. Modela escenarios de costo-efectividad, impacto presupuestal y valor terapéutico en contextos reales.",
-    color: "secondary" as const,
+    image: pegaxusLogo,
+    name: "Pegaxus",
+    tag: "EL ARQUITECTO DE LA ECONOMÍA DE LA SALUD",
+    purpose:
+      "Transformar la incertidumbre financiera en predictibilidad mediante el análisis de valor terapéutico.",
+    capabilities: [
+      {
+        title: "Inteligencia de Negociación",
+        desc: "Modelado de acuerdos de acceso gestionado y riesgos compartidos. Notas técnicas de precisión.",
+      },
+      {
+        title: "Análisis Multicriterio (MCDA)",
+        desc: "Evaluación objetiva del valor de nuevas tecnologías y medicamentos de alto costo.",
+      },
+      {
+        title: "Predictibilidad de Siniestralidad",
+        desc: "Proyección de impactos presupuestales basada en datos de vida real (RWD).",
+      },
+    ],
+    status: "OPERATIVO",
   },
 ];
 
 const AgentsSection = () => {
   return (
-    <section id="agentes" className="section-padding border-t border-border relative">
-      <div className="max-w-5xl mx-auto">
+    <section id="agentes-ia" className="relative py-32 bg-card">
+      <div className="absolute inset-0 grid-pattern opacity-5" />
+
+      <div className="container relative z-10 px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-20"
         >
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-px bg-primary" />
-            <p className="text-xs uppercase tracking-[0.4em] text-primary font-mono">
-              Ecosistema Agéntico
-            </p>
-          </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-3 text-foreground">
-            Orquestación CAS
+          <span className="font-mono text-xs uppercase tracking-[0.3em] text-neon-cyan block mb-4">
+            Ecosistema Agéntico & Orquestación CAS
+          </span>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            Agentes <span className="text-gradient-bio">autónomos</span>
           </h2>
-          <p className="text-xs font-mono text-muted-foreground/50 mb-3 tracking-wider">
-            CONTEXT AWARE SYSTEM
-          </p>
-          <p className="text-sm text-muted-foreground mb-12 max-w-xl">
-            IA resolutiva que decide bajo supervisión humana. Agentes especializados para decisiones clínicas y económicas en salud.
+          <div className="glow-line max-w-xs mb-6" />
+          <p className="text-muted-foreground text-lg max-w-2xl">
+            De la IA generativa a la IA resolutiva: agentes que no solo responden, sino que deciden bajo supervisión humana y CAS (Context Aware Systems).
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {agents.map((agent, i) => {
-            const isPrimary = agent.color === "primary";
-            return (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.15 }}
-                className={`relative p-8 md:p-10 border rounded-none bg-card transition-all duration-500 group ${
-                  isPrimary
-                    ? "border-primary/20 hover:glow-border"
-                    : "border-secondary/20 hover:glow-border-magenta"
-                }`}
-              >
-                {/* Top accent line */}
-                <div
-                  className={`absolute top-0 left-0 right-0 h-px ${
-                    isPrimary
-                      ? "bg-gradient-to-r from-primary/50 via-primary/20 to-transparent"
-                      : "bg-gradient-to-r from-secondary/50 via-secondary/20 to-transparent"
-                  }`}
-                />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {agents.map((agent, index) => (
+            <motion.div
+              key={agent.name}
+              initial={{ opacity: 0, x: index === 0 ? -30 : 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              className="relative border-2 border-border bg-background p-8 md:p-10"
+            >
+              {/* Status indicator */}
+              <div className="absolute top-6 right-6 flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-neon-cyan animate-pulse-glow" />
+                <span className="font-mono text-[10px] tracking-widest text-neon-cyan">
+                  {agent.status}
+                </span>
+              </div>
 
-                <div className={`w-12 h-12 flex items-center justify-center border rounded-none mb-6 ${
-                  isPrimary ? "border-primary/30" : "border-secondary/30"
-                }`}>
-                  <agent.icon className={isPrimary ? "text-primary" : "text-secondary"} size={24} />
+              <div className="mb-6 overflow-hidden rounded-lg border border-border bg-background/50">
+                <img src={agent.image} alt={agent.name} className="w-full h-48 md:h-56 object-contain p-2" />
+              </div>
+
+              <div className="flex items-center gap-4 mb-4">
+                <div>
+                  <h3 className="text-2xl font-bold text-foreground">{agent.name}</h3>
+                  <span className="font-mono text-[10px] text-muted-foreground tracking-widest uppercase">
+                    {agent.tag}
+                  </span>
                 </div>
+              </div>
 
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-1">{agent.name}</h3>
-                <p className={`text-xs font-mono mb-6 tracking-wider ${
-                  isPrimary ? "text-primary/60" : "text-secondary/60"
-                }`}>
-                  {agent.role.toUpperCase()}
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-8">{agent.description}</p>
+              <p className="text-sm text-muted-foreground mb-6 border-l-2 border-primary/30 pl-4 italic">
+                {agent.purpose}
+              </p>
 
-                <button className={`inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider transition-all ${
-                  isPrimary
-                    ? "text-primary/60 hover:text-primary"
-                    : "text-secondary/60 hover:text-secondary"
-                }`}>
-                  <ExternalLink size={12} />
-                  Ver Demo
+              <div className="space-y-5">
+                {agent.capabilities.map((cap, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <div className="mt-2 w-1.5 h-1.5 bg-primary shrink-0" />
+                    <div>
+                      <span className="text-sm font-semibold text-foreground">{cap.title}:</span>{" "}
+                      <span className="text-sm text-muted-foreground">{cap.desc}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-border">
+                <button className="font-mono text-xs uppercase tracking-widest text-primary hover:text-neon-cyan transition-colors">
+                  Ver Demo →
                 </button>
-              </motion.div>
-            );
-          })}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

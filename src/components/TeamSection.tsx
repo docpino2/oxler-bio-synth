@@ -1,64 +1,133 @@
 import { motion } from "framer-motion";
+import fotoLuisPino from "@/assets/foto-luis-pino.png";
+import fotoAndreaFranco from "@/assets/foto-andrea-franco.jpg";
+import fotoLilianaClavijo from "@/assets/foto-liliana-clavijo.jpg";
 
-const team = [
-  { name: "Luis Eduardo Pino V.", role: "CEO & Fundador", desc: "Médico. Arquitecto de decisiones en salud. Lidera la visión de medicina exponencial." },
-  { name: "Andrea Franco Corredor", role: "Directora Clínica", desc: "Gestión clínica avanzada y auditoría de valor en sistemas de salud." },
-  { name: "Liliana Clavijo Alvarez", role: "Directora de Investigación", desc: "Investigación aplicada, validación clínica y producción de evidencia." },
-  { name: "Gerardo Ospina", role: "Director de Tecnología", desc: "Arquitectura de sistemas, desarrollo biodigital y plataformas de datos." },
-  { name: "Julián Martínez", role: "Lead Data Scientist", desc: "Modelos predictivos, analítica avanzada y machine learning en salud." },
-  { name: "Tatiana Sierra", role: "Gestión de Proyectos", desc: "Coordinación estratégica, gestión operativa y diseño de procesos." },
-  { name: "Iván Camilo Triana", role: "Desarrollador Senior", desc: "Desarrollo de plataformas, soluciones de IA y sistemas multiagente." },
-  { name: "Alejandro González", role: "Analista HEOR", desc: "Economía de la salud, evaluación de tecnologías y modelos de valor." },
-  { name: "Manuel Gómez Chacón", role: "Diseñador UX/UI", desc: "Experiencia de usuario en productos de salud digital y biotech." },
-  { name: "Juan Pablo Pino Franco", role: "Community Manager", desc: "Estrategia digital, comunicación y gestión de comunidad." },
+const teamMembers = [
+  {
+    name: "Luis Eduardo Pino V.",
+    role: "CEO",
+    description: "Médico Hematólogo y Oncólogo\nEspecialista en IA/ML",
+    initials: "LP",
+    photo: fotoLuisPino,
+  },
+  {
+    name: "Andrea Franco Corredor",
+    role: "Gerente General",
+    description: "Médica Oftalmóloga",
+    initials: "AF",
+    photo: fotoAndreaFranco,
+  },
+  {
+    name: "Liliana Clavijo Alvarez",
+    role: "Gerente de Proyectos",
+    description: "Médica Auditora,\nEspecialista en Derecho Médico",
+    initials: "LC",
+    photo: fotoLilianaClavijo,
+  },
+  {
+    name: "Gerardo Ospina H.",
+    role: "Líder de Ingeniería",
+    description: "Ingeniero de Sistemas\nMSc Educación",
+    initials: "GO",
+  },
+  {
+    name: "Julián Martínez L.",
+    role: "Desarrollador",
+    description: "Ingeniero Biomédico\nIngeniero Electrónico",
+    initials: "JM",
+  },
+  {
+    name: "Tatiana Sierra",
+    role: "Consultora",
+    description: "Enfermera Oncóloga\nMSc en Gerencia de Salud",
+    initials: "TS",
+  },
 ];
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, delay: i * 0.1 },
+  }),
+};
 
 const TeamSection = () => {
   return (
-    <section id="equipo" className="section-padding border-t border-border">
-      <div className="max-w-6xl mx-auto">
+    <section id="equipo" className="relative py-32">
+      <div className="container relative z-10 px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-16"
         >
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-px bg-secondary" />
-            <p className="text-xs uppercase tracking-[0.4em] text-secondary font-mono">Personas</p>
+          <span className="font-mono text-xs uppercase tracking-[0.3em] text-neon-cyan block mb-4">
+            Quiénes somos
+          </span>
+          <div className="flex items-baseline gap-4 mb-6">
+            <h2 className="text-4xl md:text-6xl font-bold">
+              Nuestro <span className="text-gradient-bio">equipo</span>
+            </h2>
+            <span className="font-mono text-2xl md:text-3xl text-muted-foreground">2026</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-3 text-foreground">Nuestro Equipo 2026</h2>
-          <p className="text-sm text-muted-foreground mb-12 max-w-xl">
-            Perfiles transdisciplinares: médicos, ingenieros, científicos de datos y diseñadores construyendo medicina exponencial.
+          <div className="glow-line max-w-xs mb-6" />
+          <p className="text-muted-foreground text-lg max-w-3xl leading-relaxed">
+            Somos un colectivo transdisciplinar donde médicos especialistas, científicos de datos,
+            economistas de la salud y desarrolladores trabajan colectivamente. Esta fusión nos permite
+            entender el lenguaje clínico con empatía y resolverlo con precisión algorítmica.
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-px bg-border/20">
-          {team.map((member, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {teamMembers.map((member, i) => (
             <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              key={member.name}
+              custom={i}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="p-6 bg-card group hover:bg-muted/20 transition-all duration-500"
+              variants={cardVariants}
+              className="group relative border border-border bg-card/30 backdrop-blur-sm p-8 text-center hover:border-neon-cyan/40 transition-colors duration-500"
             >
-              {/* Avatar placeholder - will be replaced with real photos */}
-              <div className="w-14 h-14 rounded-full bg-muted/50 border border-border flex items-center justify-center mb-4 text-muted-foreground font-mono text-xs group-hover:border-primary/40 group-hover:shadow-[0_0_15px_hsl(185_80%_55%/0.15)] transition-all duration-500">
-                {member.name
-                  .split(" ")
-                  .map((n) => n[0])
-                  .slice(0, 2)
-                  .join("")}
+              {/* Glow effect on hover */}
+              <div className="absolute inset-0 bg-gradient-to-b from-neon-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+              {/* Avatar */}
+              <div className="relative mx-auto mb-6 w-28 h-28 rounded-full border-2 border-border group-hover:border-neon-cyan/50 transition-colors duration-500 flex items-center justify-center bg-muted/30 overflow-hidden">
+                {member.photo ? (
+                  <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
+                ) : (
+                  <span className="text-2xl font-bold text-neon-cyan/70 group-hover:text-neon-cyan transition-colors duration-500 font-mono">
+                    {member.initials}
+                  </span>
+                )}
               </div>
-              <h3 className="text-sm font-bold text-foreground group-hover:text-primary transition-colors">
-                {member.name}
-              </h3>
-              <p className="text-[11px] font-mono text-primary/50 mb-2 tracking-wider">{member.role}</p>
-              <p className="text-xs text-muted-foreground leading-relaxed">{member.desc}</p>
+
+              {/* Info */}
+              <h3 className="text-lg font-bold text-foreground mb-1">{member.name}</h3>
+              <p className="font-mono text-xs uppercase tracking-widest text-neon-magenta mb-3">
+                {member.role}
+              </p>
+              <p className="text-sm text-muted-foreground whitespace-pre-line leading-relaxed">
+                {member.description}
+              </p>
             </motion.div>
           ))}
         </div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-12 text-center font-mono text-xs uppercase tracking-widest text-muted-foreground"
+        >
+          Hablamos el lenguaje del paciente y el lenguaje de los datos con la misma fluidez.
+        </motion.p>
       </div>
     </section>
   );
