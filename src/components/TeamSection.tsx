@@ -8,6 +8,7 @@ import fotoTatianaSierra from "@/assets/foto-tatiana-sierra.jpg";
 import fotoManuelGomez from "@/assets/foto-manuel-gomez.png";
 import fotoAlejandroGonzalez from "@/assets/foto-alejandro-gonzalez.png";
 import fotoJuanPabloPino from "@/assets/foto-juan-pablo-pino.png";
+import fotoIvanTriana from "@/assets/foto-ivan-triana.jpeg";
 
 const teamMembers = [
   {
@@ -44,6 +45,13 @@ const teamMembers = [
     description: "Ingeniero Biomédico\nIngeniero Electrónico",
     initials: "JM",
     photo: fotoJulianMartinez,
+  },
+  {
+    name: "Iván Camilo Triana A.",
+    role: "Líder de Investigación",
+    description: "Médico Internista, Epidemiólogo\nFellowship Hemato-Oncología",
+    initials: "IT",
+    photo: fotoIvanTriana,
   },
   {
     name: "Tatiana Sierra",
