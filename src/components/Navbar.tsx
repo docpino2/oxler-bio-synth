@@ -1,16 +1,20 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import oxlerLogo from "@/assets/oxler-logo.png";
+import LanguageSelector from "./LanguageSelector";
 
 const Navbar = () => {
+  const { t } = useTranslation();
+
   const navItems = [
-    { label: "Manifiesto", href: "#manifiesto" },
-    { label: "Ciclo OxLER", href: "#ciclo" },
-    { label: "Ecosistema", href: "#ecosistema" },
-    { label: "Agentes IA", href: "#agentes-ia" },
-    { label: "OxLearning", href: "#oxlearning" },
-    { label: "Equipo", href: "#equipo" },
-    { label: "Aliados", href: "#aliados" },
-    { label: "Contacto", href: "#contacto" },
+    { label: t("nav.manifiesto"), href: "#manifiesto" },
+    { label: t("nav.ciclo"), href: "#ciclo" },
+    { label: t("nav.ecosistema"), href: "#ecosistema" },
+    { label: t("nav.agentes"), href: "#agentes-ia" },
+    { label: t("nav.oxlearning"), href: "#oxlearning" },
+    { label: t("nav.equipo"), href: "#equipo" },
+    { label: t("nav.aliados"), href: "#aliados" },
+    { label: t("nav.contacto"), href: "#contacto" },
   ];
 
   return (
@@ -28,13 +32,18 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <a
-              key={item.label}
+              key={item.href}
               href={item.href}
               className="text-sm font-mono uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors"
             >
               {item.label}
             </a>
           ))}
+          <LanguageSelector />
+        </div>
+
+        <div className="md:hidden">
+          <LanguageSelector />
         </div>
       </div>
     </motion.nav>
