@@ -5,6 +5,12 @@ import logoRoche from "@/assets/logo-roche.png";
 import logoAstrazeneca from "@/assets/logo-astrazeneca.png";
 import logoAbbott from "@/assets/logo-abbott.png";
 import logoLilly from "@/assets/logo-lilly.png";
+import logoLaCardio from "@/assets/logo-lacardio.webp";
+import logoHic from "@/assets/logo-hic.png";
+import logoHomil from "@/assets/logo-homil.jpg";
+import logoCtic from "@/assets/logo-ctic.png";
+import logoKaizen from "@/assets/logo-kaizen.png";
+import logoUso from "@/assets/logo-uso.png";
 
 const pharmaLogos = [
   { name: "Johnson & Johnson", logo: logoJnj },
@@ -15,7 +21,15 @@ const pharmaLogos = [
   { name: "Lilly", logo: logoLilly },
 ];
 
-const stakeholderLogos: { name: string; logo: string }[] = [];
+const stakeholderLogos = [
+  { name: "La Cardio", logo: logoLaCardio },
+  { name: "Hospital Internacional de Colombia", logo: logoHic },
+  { name: "Hospital Militar Central", logo: logoHomil },
+  { name: "CTIC", logo: logoCtic },
+  { name: "Kaizen", logo: logoKaizen },
+  { name: "Unidad Oncológica Surcolombiana", logo: logoUso },
+];
+
 const academicLogos: { name: string; logo: string }[] = [];
 
 type AllyCategory = {
