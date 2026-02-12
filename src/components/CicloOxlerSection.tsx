@@ -205,6 +205,22 @@ const CicloOxlerSection = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* Statement */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="mt-20 text-center"
+          >
+            <p className="text-2xl md:text-4xl font-bold leading-tight max-w-4xl mx-auto">
+              Somos el siguiente nivel en la{" "}
+              <span className="text-gradient-bio">gestión integral de las enfermedades</span>
+              , la evolución de la{" "}
+              <span className="text-neon-cyan">IA médica</span>.
+            </p>
+          </motion.div>
         </div>
       </div>
     </section>
