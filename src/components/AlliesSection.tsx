@@ -10,7 +10,7 @@ import logoLaCardio from "@/assets/logo-lacardio.webp";
 import logoHic from "@/assets/logo-hic.png";
 import logoHomil from "@/assets/logo-homil.jpg";
 import logoCtic from "@/assets/logo-ctic.png";
-import logoKaizen from "@/assets/logo-kaizen.png";
+import logoFno from "@/assets/logo-fno.png";
 import logoUso from "@/assets/logo-uso.png";
 import logoRimac from "@/assets/logo-rimac.png";
 import logoSegurosBolivar from "@/assets/logo-seguros-bolivar.png";
@@ -33,7 +33,7 @@ const stakeholderLogos = [
   { name: "Hospital Internacional de Colombia", logo: logoHic },
   { name: "Hospital Militar Central", logo: logoHomil },
   { name: "CTIC", logo: logoCtic },
-  { name: "Kaizen", logo: logoKaizen },
+  { name: "Fundación Neuroncológica del Oriente", logo: logoFno },
   { name: "Unidad Oncológica Surcolombiana", logo: logoUso },
   { name: "RIMAC Seguros", logo: logoRimac },
   { name: "Seguros Bolívar", logo: logoSegurosBolivar },
