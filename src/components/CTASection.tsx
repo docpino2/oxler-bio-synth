@@ -16,8 +16,8 @@ const CTASection = () => {
   ];
 
   const handleClick = () => {
-    const el = document.getElementById("contacto");
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    const message = encodeURIComponent(t("cta.whatsappMessage"));
+    window.open(`https://wa.me/573108616076?text=${message}`, "_blank");
   };
 
   return (
