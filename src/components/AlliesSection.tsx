@@ -76,7 +76,7 @@ const AlliesSection = () => {
                 {category.logos.map((ally, i) => (
                   <motion.div key={ally.name} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }} className="group relative flex items-center justify-center border border-border bg-card/30 backdrop-blur-sm p-6 h-28 hover:border-neon-cyan/40 transition-all duration-500">
                     <div className="absolute inset-0 bg-gradient-to-b from-neon-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                    <img src={ally.logo} alt={ally.name} className={`max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-500 ${ally.name === "La Cardio" || ally.name === "AIpocratΣs" ? "max-h-20" : "max-h-14"}`} />
+                    <img src={ally.logo} alt={ally.name} className={`max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-500 ${ally.name === "La Cardio" || ally.name === "AIpocratΣs" || ally.name === "Fundación Neuroncológica del Oriente" ? "max-h-20" : "max-h-14"}`} />
                   </motion.div>
                 ))}
               </div>
