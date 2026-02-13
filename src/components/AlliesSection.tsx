@@ -19,7 +19,7 @@ import logoAipocrates from "@/assets/logo-aipocrates.png";
 import logoMitCriticalData from "@/assets/logo-mit-critical-data.png";
 import logoZadorex from "@/assets/logo-zadorex.png";
 
-const pharmaLogos = [
+const pharmaLogos: { name: string; logo: string; whiteBg?: boolean }[] = [
   { name: "Johnson & Johnson", logo: logoJnj },
   { name: "Sanofi", logo: logoSanofi },
   { name: "Roche", logo: logoRoche },
@@ -28,18 +28,18 @@ const pharmaLogos = [
   { name: "Lilly", logo: logoLilly },
 ];
 
-const stakeholderLogos = [
+const stakeholderLogos: { name: string; logo: string; whiteBg?: boolean }[] = [
   { name: "La Cardio", logo: logoLaCardio },
   { name: "Hospital Internacional de Colombia", logo: logoHic },
   { name: "Hospital Militar Central", logo: logoHomil },
   { name: "CTIC", logo: logoCtic },
-  { name: "Fundación Neuroncológica del Oriente", logo: logoFno },
+  { name: "Fundación Neuroncológica del Oriente", logo: logoFno, whiteBg: true },
   { name: "Unidad Oncológica Surcolombiana", logo: logoUso },
   { name: "RIMAC Seguros", logo: logoRimac },
   { name: "Seguros Bolívar", logo: logoSegurosBolivar },
 ];
 
-const academicLogos = [
+const academicLogos: { name: string; logo: string; whiteBg?: boolean }[] = [
   { name: "Universidad de los Andes", logo: logoUniandes },
   { name: "AIpocratΣs", logo: logoAipocrates },
   { name: "MIT Critical Data", logo: logoMitCriticalData },
@@ -76,7 +76,9 @@ const AlliesSection = () => {
                 {category.logos.map((ally, i) => (
                   <motion.div key={ally.name} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }} className="group relative flex items-center justify-center border border-border bg-card/30 backdrop-blur-sm p-6 h-28 hover:border-neon-cyan/40 transition-all duration-500">
                     <div className="absolute inset-0 bg-gradient-to-b from-neon-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                    <img src={ally.logo} alt={ally.name} className={`max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-500 ${ally.name === "La Cardio" || ally.name === "AIpocratΣs" || ally.name === "Fundación Neuroncológica del Oriente" ? "max-h-20" : "max-h-14"}`} />
+                    <div className={`flex items-center justify-center rounded ${ally.whiteBg ? "bg-white p-2" : ""}`}>
+                      <img src={ally.logo} alt={ally.name} className={`max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-500 ${ally.name === "La Cardio" || ally.name === "AIpocratΣs" || ally.name === "Fundación Neuroncológica del Oriente" ? "max-h-20" : "max-h-14"}`} />
+                    </div>
                   </motion.div>
                 ))}
               </div>
