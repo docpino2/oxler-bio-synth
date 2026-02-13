@@ -10,7 +10,6 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const navItems = [
-    { label: t("nav.manifiesto"), href: "#manifiesto" },
     { label: t("nav.ciclo"), href: "#ciclo" },
     { label: t("nav.ecosistema"), href: "#ecosistema" },
     { label: t("nav.agentes"), href: "#agentes-ia" },
