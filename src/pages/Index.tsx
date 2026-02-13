@@ -8,6 +8,7 @@ import ServicesSection from "@/components/ServicesSection";
 import OxLearningSection from "@/components/OxLearningSection";
 import TeamSection from "@/components/TeamSection";
 import AlliesSection from "@/components/AlliesSection";
+import CTASection from "@/components/CTASection";
 import FooterSection from "@/components/FooterSection";
 
 const Index = () => {
@@ -23,6 +24,7 @@ const Index = () => {
       <OxLearningSection />
       <TeamSection />
       <AlliesSection />
+      <CTASection />
       <FooterSection />
     </div>
   );

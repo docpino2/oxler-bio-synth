@@ -221,6 +221,22 @@
     "stakeholders": "Stakeholders",
     "academic": "Alianças Acadêmicas"
   },
+  "cta": {
+    "tag": "Pronto para transformar sua organização?",
+    "title": "Como podemos",
+    "titleHighlight": "ajudá-lo?",
+    "action": "Vamos conversar",
+    "c1Tag": "Transformação",
+    "c1": "Quer redesenhar seu modelo de gestão ou serviços e transformá-lo em unidades inteligentes?",
+    "c2Tag": "Otimização",
+    "c2": "Tem alta variabilidade clínica e volatilidade de custos, e precisa ajustar alavancas clínicas e administrativas?",
+    "c3Tag": "Estratégia IA",
+    "c3": "Quer criar sua estratégia de IA médica adequadamente?",
+    "c4Tag": "IA em Ação",
+    "c4": "Quer saber como otimizamos usando IA?",
+    "c5Tag": "Diagnóstico",
+    "c5": "Quer que façamos o diagnóstico integral do seu processo usando PENTA?"
+  },
   "footer": {
     "tagline": "Ecossistema Inteligente de Otimização em Saúde",
     "description": "Arquitetura de Decisões em Saúde suportada por IA, modelos de otimização e desenvolvimento tecnológico.",
