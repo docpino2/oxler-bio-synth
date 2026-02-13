@@ -21,7 +21,7 @@ const CTASection = () => {
   };
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section id="soluciones" className="relative py-24 overflow-hidden">
       {/* Background grid pattern */}
       <div className="absolute inset-0 grid-pattern opacity-30" />
       <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
