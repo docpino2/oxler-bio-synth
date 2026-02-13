@@ -221,6 +221,22 @@
     "stakeholders": "Stakeholders",
     "academic": "Academic Alliances"
   },
+  "cta": {
+    "tag": "Ready to transform your organization?",
+    "title": "How can we",
+    "titleHighlight": "help you?",
+    "action": "Let's talk",
+    "c1Tag": "Transformation",
+    "c1": "Do you want to redesign your management or service model and turn it into intelligent units?",
+    "c2Tag": "Optimization",
+    "c2": "Do you have high clinical variability and cost volatility, and need to adjust clinical and administrative levers?",
+    "c3Tag": "AI Strategy",
+    "c3": "Do you want to properly create your medical AI strategy?",
+    "c4Tag": "AI in Action",
+    "c4": "Do you want to know how we optimize using AI?",
+    "c5Tag": "Diagnosis",
+    "c5": "Do you want us to do a comprehensive diagnosis of your process using PENTA?"
+  },
   "footer": {
     "tagline": "Intelligent Health Optimization Ecosystem",
     "description": "Health Decision Architecture supported by AI, optimization models, and technological development.",
