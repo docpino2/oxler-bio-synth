@@ -13,6 +13,7 @@ const FooterSection = () => {
     { label: t("nav.oxlearning"), href: "#oxlearning" },
     { label: t("nav.equipo"), href: "#equipo" },
     { label: t("nav.aliados"), href: "#aliados" },
+    { label: t("nav.soluciones"), href: "#soluciones" },
   ];
 
   return (
