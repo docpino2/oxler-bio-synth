@@ -13,7 +13,7 @@ const Navbar = () => {
     { label: t("nav.ciclo"), href: "#ciclo" },
     { label: t("nav.ecosistema"), href: "#ecosistema" },
     { label: t("nav.agentes"), href: "#agentes-ia" },
-    { label: t("nav.oxlearning"), href: "#oxlearning" },
+    { label: t("nav.oxlearning"), href: "#servicios" },
     { label: t("nav.equipo"), href: "#equipo" },
     { label: t("nav.aliados"), href: "#aliados" },
     { label: t("nav.soluciones"), href: "#soluciones" },
