@@ -12,7 +12,7 @@ const ServicesSection = () => {
     { icon: Workflow, title: t("services.s4Title"), description: t("services.s4Desc") },
     { icon: Zap, title: t("services.s5Title"), description: t("services.s5Desc") },
     { icon: Globe, title: t("services.s6Title"), description: t("services.s6Desc") },
-    { icon: GraduationCap, title: t("services.s7Title"), description: t("services.s7Desc") },
+    
   ];
 
   const uciaItems = [
