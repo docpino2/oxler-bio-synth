@@ -80,23 +80,7 @@
     "statement": "We are the next level in",
     "statementHighlight": "comprehensive disease management",
     "statementEnd": ", the evolution of",
-    "statementHighlight2": "medical AI",
-    "coeng": {
-      "tag": "SUB-LINE",
-      "title": "Clinical Co-Engineering",
-      "subtitle": "A space where healthcare professionals build real, safe, and scalable solutions alongside our team.",
-      "bring": "Bring your:",
-      "bring1": "Clinical problem",
-      "bring2": "Prototype",
-      "bring3": "Idea",
-      "weContribute": "We contribute:",
-      "c1": "Technology architecture",
-      "c2": "Clinical validation",
-      "c3": "Safety and regulation",
-      "c4": "Advanced analytics",
-      "c5": "Systemic sustainability",
-      "closing": "Because in healthcare, it's not enough for something to seem to work. It must be responsible and scalable."
-    }
+    "statementHighlight2": "medical AI"
   },
   "penta": {
     "tag": "Optimization Model",
