@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Brain, Cpu, GraduationCap, Search, ArrowRight } from "lucide-react";
+import { Brain, Cpu, GraduationCap, Search, ArrowRight, Dna, Lightbulb, FlaskConical, ArrowRightCircle, Shield, BarChart3, RefreshCw } from "lucide-react";
 import cicloOxlerDiagram from "@/assets/ciclo-oxler-diagram.png";
 
 const CicloOxlerSection = () => {
