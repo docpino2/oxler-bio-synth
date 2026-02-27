@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { Layers, Cpu, Database, Workflow, Zap, Globe, Building2, GraduationCap } from "lucide-react";
+import { Layers, Cpu, Database, Workflow, Zap, Globe, Building2, GraduationCap, Dna, FlaskConical, Lightbulb, ArrowRightCircle } from "lucide-react";
 
 const ServicesSection = () => {
   const { t } = useTranslation();
