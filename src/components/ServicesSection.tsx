@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { Layers, Cpu, Database, Workflow, Zap, Globe, Building2, GraduationCap } from "lucide-react";
+import { Layers, Cpu, Database, Workflow, Zap, Globe, Building2, GraduationCap, Dna, FlaskConical, Lightbulb, ArrowRightCircle } from "lucide-react";
 
 const ServicesSection = () => {
   const { t } = useTranslation();
@@ -43,6 +43,57 @@ const ServicesSection = () => {
           ))}
         </div>
 
+        {/* Co-Ingeniería Clínica */}
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mt-px border-2 border-secondary/30 bg-background p-8 md:p-10 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-secondary" />
+          <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-secondary" />
+          <div className="absolute top-3 right-3">
+            <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-neon-cyan bg-secondary/10 px-3 py-1">{t("services.coeng.tag")}</span>
+          </div>
+
+          <div className="flex items-center gap-3 mb-3">
+            <Dna className="w-6 h-6 text-secondary" />
+            <h3 className="text-xl md:text-2xl font-bold text-gradient-bio">{t("services.coeng.title")}</h3>
+          </div>
+          <p className="text-muted-foreground mb-8 max-w-3xl italic border-l-2 border-secondary/30 pl-4">{t("services.coeng.subtitle")}</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-neon-cyan block mb-4">{t("services.coeng.bring")}</span>
+              <div className="space-y-3">
+                {[
+                  { icon: FlaskConical, text: t("services.coeng.bring1") },
+                  { icon: Lightbulb, text: t("services.coeng.bring2") },
+                  { icon: ArrowRightCircle, text: t("services.coeng.bring3") },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3 group">
+                    <div className="p-1.5 bg-secondary/10 group-hover:bg-secondary/20 transition-colors">
+                      <item.icon className="w-4 h-4 text-secondary" />
+                    </div>
+                    <span className="text-foreground font-medium">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div>
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-neon-magenta block mb-4">{t("services.coeng.weContribute")}</span>
+              <div className="space-y-2.5">
+                {[t("services.coeng.c1"), t("services.coeng.c2"), t("services.coeng.c3"), t("services.coeng.c4"), t("services.coeng.c5")].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="w-1.5 h-1.5 bg-primary shrink-0" />
+                    <span className="text-sm text-muted-foreground">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 pt-6 border-t border-border">
+            <p className="text-sm md:text-base text-foreground font-medium italic">{t("services.coeng.closing")}</p>
+          </div>
+        </motion.div>
+
+        {/* Unidades de IA Clínica */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mt-px border-2 border-primary/30 bg-background p-8 md:p-10">
           <div className="flex items-center gap-3 mb-4">
             <Building2 className="w-6 h-6 text-primary" />

@@ -80,23 +80,7 @@
     "statement": "Somos el siguiente nivel en la",
     "statementHighlight": "gestión integral de las enfermedades",
     "statementEnd": ", la evolución de la",
-    "statementHighlight2": "IA médica",
-    "coeng": {
-      "tag": "SUBLÍNEA",
-      "title": "Co-Ingeniería Clínica",
-      "subtitle": "Un espacio donde personal de la salud construye junto a nuestro equipo soluciones reales, seguras y escalables.",
-      "bring": "Trae tu:",
-      "bring1": "Problema clínico",
-      "bring2": "Prototipo",
-      "bring3": "Idea",
-      "weContribute": "Nosotros aportamos:",
-      "c1": "Arquitectura tecnológica",
-      "c2": "Validación clínica",
-      "c3": "Seguridad y regulación",
-      "c4": "Analítica avanzada",
-      "c5": "Sostenibilidad sistémica",
-      "closing": "Porque en salud no basta con que algo parezca funcionar. Debe ser responsable y escalable."
-    }
+    "statementHighlight2": "IA médica"
   },
   "penta": {
     "tag": "Modelo de Optimización",
@@ -182,6 +166,22 @@
     "s6Desc": "Evaluación de tecnologías sanitarias, modelos farmacoeconómicos y estrategias de acceso. Aplicación de Matrices de Decisión Multicriterio (MCDA) y asesoría en modelos de negociación.",
     "s7Title": "Educación & E-Learning",
     "s7Desc": "Diseño de eventos educativos disruptivos y plataformas de e-learning usando tecnologías/IA, metodologías activas y epistemología conductual.",
+    "coeng": {
+      "tag": "SUBLÍNEA",
+      "title": "Co-Ingeniería Clínica",
+      "subtitle": "Un espacio donde personal de la salud construye junto a nuestro equipo soluciones reales, seguras y escalables.",
+      "bring": "Trae tu:",
+      "bring1": "Problema clínico",
+      "bring2": "Prototipo",
+      "bring3": "Idea",
+      "weContribute": "Nosotros aportamos:",
+      "c1": "Arquitectura tecnológica",
+      "c2": "Validación clínica",
+      "c3": "Seguridad y regulación",
+      "c4": "Analítica avanzada",
+      "c5": "Sostenibilidad sistémica",
+      "closing": "Porque en salud no basta con que algo parezca funcionar. Debe ser responsable y escalable."
+    },
     "uciaTitle": "Unidades de IA Clínica",
     "uciaSubtitle": "La evolución del servicio tradicional hacia el Nodo de Decisión Inteligente.",
     "uciaL1": "Propósito",

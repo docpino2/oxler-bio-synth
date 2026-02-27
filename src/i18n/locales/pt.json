@@ -80,23 +80,7 @@
     "statement": "Somos o próximo nível na",
     "statementHighlight": "gestão integral das doenças",
     "statementEnd": ", a evolução da",
-    "statementHighlight2": "IA médica",
-    "coeng": {
-      "tag": "SUBLINHA",
-      "title": "Co-Engenharia Clínica",
-      "subtitle": "Um espaço onde profissionais de saúde constroem soluções reais, seguras e escaláveis junto à nossa equipe.",
-      "bring": "Traga seu:",
-      "bring1": "Problema clínico",
-      "bring2": "Protótipo",
-      "bring3": "Ideia",
-      "weContribute": "Nós contribuímos com:",
-      "c1": "Arquitetura tecnológica",
-      "c2": "Validação clínica",
-      "c3": "Segurança e regulação",
-      "c4": "Analítica avançada",
-      "c5": "Sustentabilidade sistêmica",
-      "closing": "Porque na saúde não basta que algo pareça funcionar. Deve ser responsável e escalável."
-    }
+    "statementHighlight2": "IA médica"
   },
   "penta": {
     "tag": "Modelo de Otimização",
@@ -182,6 +166,22 @@
     "s6Desc": "Avaliação de tecnologias sanitárias, modelos farmacoeconômicos e estratégias de acesso. Aplicação de Matrizes de Decisão Multicritério (MCDA) e assessoria em modelos de negociação.",
     "s7Title": "Educação & E-Learning",
     "s7Desc": "Design de eventos educacionais disruptivos e plataformas de e-learning usando tecnologias/IA, metodologias ativas e epistemologia comportamental.",
+    "coeng": {
+      "tag": "SUBLINHA",
+      "title": "Co-Engenharia Clínica",
+      "subtitle": "Um espaço onde profissionais de saúde constroem soluções reais, seguras e escaláveis junto à nossa equipe.",
+      "bring": "Traga seu:",
+      "bring1": "Problema clínico",
+      "bring2": "Protótipo",
+      "bring3": "Ideia",
+      "weContribute": "Nós contribuímos com:",
+      "c1": "Arquitetura tecnológica",
+      "c2": "Validação clínica",
+      "c3": "Segurança e regulação",
+      "c4": "Analítica avançada",
+      "c5": "Sustentabilidade sistêmica",
+      "closing": "Porque na saúde não basta que algo pareça funcionar. Deve ser responsável e escalável."
+    },
     "uciaTitle": "Unidades de IA Clínica",
     "uciaSubtitle": "A evolução do serviço tradicional para o Nó de Decisão Inteligente.",
     "uciaL1": "Propósito",
