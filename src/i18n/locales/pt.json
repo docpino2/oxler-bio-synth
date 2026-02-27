@@ -80,23 +80,7 @@
     "statement": "Somos o próximo nível na",
     "statementHighlight": "gestão integral das doenças",
     "statementEnd": ", a evolução da",
-    "statementHighlight2": "IA médica",
-    "coeng": {
-      "tag": "SUBLINHA",
-      "title": "Co-Engenharia Clínica",
-      "subtitle": "Um espaço onde profissionais de saúde constroem soluções reais, seguras e escaláveis junto à nossa equipe.",
-      "bring": "Traga seu:",
-      "bring1": "Problema clínico",
-      "bring2": "Protótipo",
-      "bring3": "Ideia",
-      "weContribute": "Nós contribuímos com:",
-      "c1": "Arquitetura tecnológica",
-      "c2": "Validação clínica",
-      "c3": "Segurança e regulação",
-      "c4": "Analítica avançada",
-      "c5": "Sustentabilidade sistêmica",
-      "closing": "Porque na saúde não basta que algo pareça funcionar. Deve ser responsável e escalável."
-    }
+    "statementHighlight2": "IA médica"
   },
   "penta": {
     "tag": "Modelo de Otimização",
