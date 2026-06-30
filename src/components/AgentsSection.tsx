@@ -1,9 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { ShieldCheck, TrendingUp, Play, X } from "lucide-react";
+import { ShieldCheck, TrendingUp, BarChart3, GraduationCap, Play, X, ExternalLink } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import oncoagentLogo from "@/assets/oncoagent-logo.png";
-import pegaxusLogo from "@/assets/pegaxus-logo.png";
+import oncoagentLogo from "@/assets/oncoagente-logo-v2.svg.asset.json";
+import pegaxusLogo from "@/assets/pegaxus-logo-v2.svg.asset.json";
+import oxliticaLogo from "@/assets/oxlitica-logo.png.asset.json";
+import oxtutorLogo from "@/assets/oxtutor-logo.svg.asset.json";
 
 const AgentsSection = () => {
   const [activeDemo, setActiveDemo] = useState<string | null>(null);
@@ -12,7 +14,7 @@ const AgentsSection = () => {
   const agents = [
     {
       icon: ShieldCheck,
-      image: oncoagentLogo,
+      image: oncoagentLogo.url,
       name: "OncoAgent",
       tag: t("agents.oncoagent.tag"),
       purpose: t("agents.oncoagent.purpose"),
@@ -23,10 +25,11 @@ const AgentsSection = () => {
       ],
       status: t("agents.status"),
       demoUrl: "https://www.youtube.com/embed/A8SiGn--lsA",
+      siteUrl: null,
     },
     {
       icon: TrendingUp,
-      image: pegaxusLogo,
+      image: pegaxusLogo.url,
       name: "Pegaxus",
       tag: t("agents.pegaxus.tag"),
       purpose: t("agents.pegaxus.purpose"),
@@ -37,6 +40,37 @@ const AgentsSection = () => {
       ],
       status: t("agents.status"),
       demoUrl: "https://www.youtube.com/embed/2xFvBjOZF_4",
+      siteUrl: null,
+    },
+    {
+      icon: BarChart3,
+      image: oxliticaLogo.url,
+      name: "Oxlitica",
+      tag: t("agents.oxlitica.tag"),
+      purpose: t("agents.oxlitica.purpose"),
+      capabilities: [
+        { title: t("agents.oxlitica.cap1Title"), desc: t("agents.oxlitica.cap1Desc") },
+        { title: t("agents.oxlitica.cap2Title"), desc: t("agents.oxlitica.cap2Desc") },
+        { title: t("agents.oxlitica.cap3Title"), desc: t("agents.oxlitica.cap3Desc") },
+      ],
+      status: t("agents.status"),
+      demoUrl: null,
+      siteUrl: "https://oxlitica.com/",
+    },
+    {
+      icon: GraduationCap,
+      image: oxtutorLogo.url,
+      name: "OxTutor",
+      tag: t("agents.oxtutor.tag"),
+      purpose: t("agents.oxtutor.purpose"),
+      capabilities: [
+        { title: t("agents.oxtutor.cap1Title"), desc: t("agents.oxtutor.cap1Desc") },
+        { title: t("agents.oxtutor.cap2Title"), desc: t("agents.oxtutor.cap2Desc") },
+        { title: t("agents.oxtutor.cap3Title"), desc: t("agents.oxtutor.cap3Desc") },
+      ],
+      status: t("agents.status"),
+      demoUrl: null,
+      siteUrl: "https://oxtutor.live/",
     },
   ];
 
@@ -56,7 +90,7 @@ const AgentsSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {agents.map((agent, index) => (
-            <motion.div key={agent.name} initial={{ opacity: 0, x: index === 0 ? -30 : 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: index * 0.2 }} className="relative border-2 border-border bg-background p-8 md:p-10">
+            <motion.div key={agent.name} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: (index % 2) * 0.2 }} className="relative border-2 border-border bg-background p-8 md:p-10">
               <div className="absolute top-6 right-6 flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-neon-cyan animate-pulse-glow" />
                 <span className="font-mono text-[10px] tracking-widest text-neon-cyan">{agent.status}</span>
@@ -98,13 +132,19 @@ const AgentsSection = () => {
               </AnimatePresence>
 
               <div className="mt-8 pt-6 border-t border-border">
-                <button onClick={() => setActiveDemo(activeDemo === agent.name ? null : agent.name)} className="font-mono text-xs uppercase tracking-widest text-primary hover:text-neon-cyan transition-colors flex items-center gap-2">
-                  {activeDemo === agent.name ? (
-                    <><X className="w-3 h-3" /> {t("agents.closeDemo")}</>
-                  ) : (
-                    <><Play className="w-3 h-3" /> {t("agents.watchDemo")}</>
-                  )}
-                </button>
+                {agent.demoUrl ? (
+                  <button onClick={() => setActiveDemo(activeDemo === agent.name ? null : agent.name)} className="font-mono text-xs uppercase tracking-widest text-primary hover:text-neon-cyan transition-colors flex items-center gap-2">
+                    {activeDemo === agent.name ? (
+                      <><X className="w-3 h-3" /> {t("agents.closeDemo")}</>
+                    ) : (
+                      <><Play className="w-3 h-3" /> {t("agents.watchDemo")}</>
+                    )}
+                  </button>
+                ) : agent.siteUrl ? (
+                  <a href={agent.siteUrl} target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-primary hover:text-neon-cyan transition-colors flex items-center gap-2">
+                    <ExternalLink className="w-3 h-3" /> {t("agents.visitSite")}
+                  </a>
+                ) : null}
               </div>
             </motion.div>
           ))}
