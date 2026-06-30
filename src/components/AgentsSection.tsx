@@ -2,10 +2,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ShieldCheck, TrendingUp, BarChart3, GraduationCap, Play, X, ExternalLink } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import oncoagentLogo from "@/assets/oncoagente-logo-v2.svg.asset.json";
-import pegaxusLogo from "@/assets/pegaxus-logo-v2.svg.asset.json";
+import oncoagentLogo from "@/assets/oncoagente-logo.png.asset.json";
+import pegaxusLogo from "@/assets/pegaxus-logo.png.asset.json";
 import oxliticaLogo from "@/assets/oxlitica-logo.png.asset.json";
-import oxtutorLogo from "@/assets/oxtutor-logo.svg.asset.json";
+import oxtutorLogo from "@/assets/oxtutor-logo.png.asset.json";
 
 const AgentsSection = () => {
   const [activeDemo, setActiveDemo] = useState<string | null>(null);
