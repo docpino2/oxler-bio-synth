@@ -160,7 +160,7 @@
     },
     "oxtutor": {
       "tag": "INTELLIGENT TUTORING FOR EXPONENTIAL MEDICINE",
-      "purpose": "Educational agent that guides healthcare professionals step by step, resolves questions, and reinforces learning in exponential medicine.",
+      "purpose": "Exclusive educational agent for OxLEARNING students that guides step by step, resolves questions, and reinforces learning in exponential medicine.",
       "cap1Title": "Personalized Tutoring",
       "cap1Desc": "Answers questions about course content and guides the student in an individualized way.",
       "cap2Title": "Quiz & Assessment",
