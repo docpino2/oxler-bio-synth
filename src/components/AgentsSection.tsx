@@ -70,7 +70,7 @@ const AgentsSection = () => {
       ],
       status: t("agents.status"),
       demoUrl: null,
-      siteUrl: "https://oxtutor.live/",
+      siteUrl: null,
     },
   ];
 
