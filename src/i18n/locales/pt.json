@@ -146,6 +146,27 @@
       "cap2Desc": "Avaliação objetiva do valor de novas tecnologias e medicamentos de alto custo.",
       "cap3Title": "Previsibilidade de Sinistralidade",
       "cap3Desc": "Projeção de impactos orçamentários baseada em dados de vida real (RWD)."
+    },
+    "visitSite": "Visitar Site",
+    "oxlitica": {
+      "tag": "AGENTE DE ANALÍTICA · SWARM OXLER",
+      "purpose": "Agente autônomo para risco inteligente em saúde: organiza coortes, ativa modelagem analítica avançada e gera insights operacionais para a gestão do risco na LATAM.",
+      "cap1Title": "Organização de Coortes",
+      "cap1Desc": "Estrutura populações e agrupa dados clínicos para análises avançadas de risco.",
+      "cap2Title": "Modelagem Analítica Avançada",
+      "cap2Desc": "Ativa modelos preditivos e estatísticos desenhados para os atores do setor de saúde.",
+      "cap3Title": "Insights Operacionais",
+      "cap3Desc": "Gera leituras acionáveis para a gestão do risco, integradas ao swarm OxLER."
+    },
+    "oxtutor": {
+      "tag": "TUTORIA INTELIGENTE PARA MEDICINA EXPONENCIAL",
+      "purpose": "Agente educativo que acompanha o profissional de saúde passo a passo, resolve dúvidas e reforça a aprendizagem em medicina exponencial.",
+      "cap1Title": "Tutoria Personalizada",
+      "cap1Desc": "Responde perguntas sobre o conteúdo do curso e guia o estudante de forma individualizada.",
+      "cap2Title": "Quiz e Avaliação",
+      "cap2Desc": "Gera avaliações interativas para medir compreensão e reforçar conceitos-chave.",
+      "cap3Title": "Explicação Modular",
+      "cap3Desc": "Cobre módulos especializados com explicações claras adaptadas ao ritmo do aprendiz."
     }
   },
   "services": {

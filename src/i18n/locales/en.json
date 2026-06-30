@@ -146,6 +146,27 @@
       "cap2Desc": "Objective evaluation of the value of new technologies and high-cost medications.",
       "cap3Title": "Claims Predictability",
       "cap3Desc": "Budget impact projection based on real-world data (RWD)."
+    },
+    "visitSite": "Visit Site",
+    "oxlitica": {
+      "tag": "ANALYTICS AGENT · OXLER SWARM",
+      "purpose": "Autonomous agent for intelligent health risk: organizes cohorts, activates advanced analytical modeling, and generates operational insights for risk management in LATAM.",
+      "cap1Title": "Cohort Organization",
+      "cap1Desc": "Structures populations and groups clinical data for advanced risk analysis.",
+      "cap2Title": "Advanced Analytical Modeling",
+      "cap2Desc": "Activates predictive and statistical models designed for healthcare stakeholders.",
+      "cap3Title": "Operational Insights",
+      "cap3Desc": "Generates actionable readings for risk management, integrated into the OxLER swarm."
+    },
+    "oxtutor": {
+      "tag": "INTELLIGENT TUTORING FOR EXPONENTIAL MEDICINE",
+      "purpose": "Educational agent that guides healthcare professionals step by step, resolves questions, and reinforces learning in exponential medicine.",
+      "cap1Title": "Personalized Tutoring",
+      "cap1Desc": "Answers questions about course content and guides the student in an individualized way.",
+      "cap2Title": "Quiz & Assessment",
+      "cap2Desc": "Generates interactive evaluations to measure understanding and reinforce key concepts.",
+      "cap3Title": "Modular Explanation",
+      "cap3Desc": "Covers specialized modules with clear explanations adapted to the learner's pace."
     }
   },
   "services": {
