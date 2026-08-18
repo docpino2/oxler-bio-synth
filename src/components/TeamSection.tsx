@@ -17,7 +17,7 @@ const teamMembers = [
   { name: "Luis Eduardo Pino V.", role: "Socio Fundador y CEO", description: "Médico Hematólogo y Oncólogo\nEspecialista en IA/ML", initials: "LP", photo: fotoLuisPino },
   { name: "Andrea Franco Corredor", role: "Socio Fundador y Gerente General", description: "Médica Oftalmóloga", initials: "AF", photo: fotoAndreaFranco },
   { name: "Liliana Clavijo Alvarez", role: "Gerente de Proyectos", description: "Médica Auditora,\nEspecialista en Derecho Médico", initials: "LC", photo: fotoLilianaClavijo },
-  { name: "Alejandro León Garrido", role: "Consultor", description: "Médico Oncólogo\nMBA", initials: "AL", photo: fotoAlejandroLeonAsset.url },
+  { name: "Alejandro León Garrido-Lecca", role: "Consultor", description: "Médico Oncólogo\nMBA\nMSc Farmacoeconomía", initials: "AL", photo: fotoAlejandroLeonAsset.url },
   { name: "Andrés Rico Carrillo", role: "Consultor", description: "Médico Internista\nExperto en Modelos de Gestión e IA", initials: "AR", photo: fotoAndresRicoAsset.url },
   { name: "Gerardo Ospina H.", role: "Líder de Ingeniería", description: "Ingeniero de Sistemas\nMSc Educación", initials: "GO", photo: fotoGerardoOspina },
   { name: "Julián Martínez L.", role: "Desarrollador", description: "Ingeniero Biomédico\nIngeniero Electrónico", initials: "JM", photo: fotoJulianMartinez },
