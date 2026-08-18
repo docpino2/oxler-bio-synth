@@ -11,11 +11,15 @@ import fotoAlejandroGonzalez from "@/assets/foto-alejandro-gonzalez.png";
 import fotoJuanPabloPino from "@/assets/foto-juan-pablo-pino.png";
 import fotoIvanTriana from "@/assets/foto-ivan-triana.jpeg";
 import fotoFelipeFigueroa from "@/assets/foto-felipe-figueroa.jpeg";
+import fotoAlejandroLeonAsset from "@/assets/foto-alejandro-leon.jpeg.asset.json";
+import fotoAndresRicoAsset from "@/assets/foto-andres-rico.jpeg.asset.json";
 
 const teamMembers = [
   { name: "Luis Eduardo Pino V.", role: "Socio Fundador y CEO", description: "Médico Hematólogo y Oncólogo\nEspecialista en IA/ML", initials: "LP", photo: fotoLuisPino },
   { name: "Andrea Franco Corredor", role: "Socio Fundador y Gerente General", description: "Médica Oftalmóloga", initials: "AF", photo: fotoAndreaFranco },
   { name: "Liliana Clavijo Alvarez", role: "Gerente de Proyectos", description: "Médica Auditora,\nEspecialista en Derecho Médico", initials: "LC", photo: fotoLilianaClavijo },
+  { name: "Alejandro León Garrido", role: "Consultor", description: "Médico Oncólogo\nMBA", initials: "AL", photo: fotoAlejandroLeonAsset.url },
+  { name: "Andrés Rico Carrillo", role: "Consultor", description: "Médico Internista\nExperto en Modelos de Gestión e IA", initials: "AR", photo: fotoAndresRicoAsset.url },
   { name: "Gerardo Ospina H.", role: "Líder de Ingeniería", description: "Ingeniero de Sistemas\nMSc Educación", initials: "GO", photo: fotoGerardoOspina },
   { name: "Julián Martínez L.", role: "Desarrollador", description: "Ingeniero Biomédico\nIngeniero Electrónico", initials: "JM", photo: fotoJulianMartinez },
   { name: "Felipe Figueroa", role: "Asesor en Derecho de IA y Propiedad Intelectual", description: "Abogado\nMSc Biociencias y Derecho\nEspecialista en PI", initials: "FF", photo: fotoFelipeFigueroa },
